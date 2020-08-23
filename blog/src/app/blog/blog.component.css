@@ -1,0 +1,18 @@
+@font-face {
+  font-family: blokk;
+  src: url
+    ("./assets/BLOKKNeue-Regular/BLOKKNeue-Regular/BLOKKNeue-Regular.ttf");
+}
+.container {
+  font-family: blokk, Arial, Helvetica, sans-serif;
+}
+.hero {
+  background-image: url("../../assets/railroad.jpg");
+  background-size: cover;
+  height: 50vh;
+  display: flex;
+}
+.hero h1 {
+  color: crimson;
+  font-size: 50px;
+}

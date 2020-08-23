@@ -1,0 +1,110 @@
+@font-face {
+    font-family: MavenPro-Medium;
+    src: url(recursos/MavenPro-Medium.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.valido{
+    grid-area: validador;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+.noValido{
+    grid-area: validador;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+.mainContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 4fr 1fr 2fr;
+    grid-template-areas: "header"
+                         "."
+                         "main"
+                         "."
+                         "footer";
+}
+.mainHeader{
+    grid-area: header;
+    height: 100px;
+}
+.mainContent{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "validador calculador";
+}
+.mainFooter{
+    grid-area: footer;
+    background-color: darkslategray;
+    height: 50px;
+}
+.mainTitle{
+    background: rgb(113, 233, 193);
+    background: linear-gradient(-90deg, #45e9ba, #9cfafa);
+    color: rgb(218, 123, 123);
+    padding: 40px 0px;
+    width: 100%;
+    font-family: MavenPro-Medium, sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    text-shadow: 1px 1px 1px darkslategray;
+}
+.formularioOk{
+    grid-area: validador;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+.formularioLetra{
+    grid-area: calculador;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+.blanco{
+    padding: 7px;
+    height: 30px;
+    width: 300px;
+    margin: 2.5px;
+}
+#letra{
+    display: inline;
+    color: dimgray;
+    font-family: sans-serif;
+    font-size: 13px;
+    padding: 7px;
+    margin: 2.5px;
+    border: black 0.5px solid;
+}
+.btn{
+    border-radius: 20px;
+    color: darkslategray;
+    background-color: rgb(238, 159, 159);
+    padding: 10px;
+    height: 50px;
+    width: 100px;
+    margin: 2.5px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.icono{
+    width: 250px;
+    height: 200px;
+}
+.veredicto{
+    font-size: 30px;
+}
+.copyright{
+    color: indianred;
+    height: 50px;
+}

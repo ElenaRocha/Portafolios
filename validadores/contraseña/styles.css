@@ -1,0 +1,63 @@
+@font-face {
+    font-family: Raleway-medium;
+    src: url(recursos/Raleway-Medium.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 2fr 2fr;
+    grid-template-areas: "header header header"
+                         ". . ."
+                         ". main. "
+                         "footer footer footer";
+}
+.main-header{
+    grid-area: header;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+}
+.main-content{
+    grid-area: main;
+    height: 200px;
+}
+.main-footer{
+    grid-area: footer;
+    background-color: rgb(71, 68, 68);
+    height: 50px;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+}
+.main-title{
+    font-family: Raleway-medium;
+    font-size: 50px;
+}
+.sub-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.password{
+    padding: 7px;
+    height: 30px;
+    width: 300px;
+    margin: 2.5px;
+}
+.medidor{
+    width: 320px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+.celda{
+    border: black 2px solid;
+}
+.copyright{
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,123 @@
+<div class="container mt-4">
+  <form novalidate [formGroup]="formulario" (ngSubmit)="getData()">
+    <div class="form-group">
+      <label>Título</label>
+      <input
+        type="text"
+        name="title"
+        class="form-control"
+        placeholder="Título del post"
+        formControlName="title"
+      />
+      <p
+        class="error"
+        *ngIf="
+          formulario.controls.title.errors?.required &&
+          formulario.controls.title.touched
+        "
+      >
+        Este campo es obligatorio
+      </p>
+    </div>
+    <div class="form-group">
+      <label>Contenido</label>
+      <input
+        type="text"
+        name="text"
+        class="form-control"
+        placeholder="Escribe aquí tu post post"
+        formControlName="text"
+      />
+      <p
+        class="error"
+        *ngIf="
+          formulario.controls.text.errors?.required &&
+          formulario.controls.text.touched
+        "
+      >
+        El campo no puede estar vacío
+      </p>
+    </div>
+    <div class="form-group">
+      <label>Autor</label>
+      <input
+        type="text"
+        name="author"
+        class="form-control"
+        placeholder="Nombre del autor del post"
+        formControlName="author"
+      />
+      <p
+        class="error"
+        *ngIf="
+          formulario.controls.author.errors?.required &&
+          formulario.controls.author.touched
+        "
+      >
+        El post debe ir firmado
+      </p>
+    </div>
+    <div class="form-group">
+      <label>Imagen</label>
+      <input
+        type="text"
+        name="image"
+        class="form-control"
+        placeholder="Elige una imagen para el post"
+        formControlName="image"
+      />
+      <p
+        class="error"
+        *ngIf="
+          formulario.controls.image.errors?.required &&
+          formulario.controls.image.touched
+        "
+      >
+        Es importante elegir una imagen para tu post
+      </p>
+    </div>
+    <div class="form-group">
+      <label>Fecha</label>
+      <input
+        type="date"
+        name="date"
+        class="form-control"
+        placeholder="¿En qué fecha se publica el post?"
+        formControlName="date"
+      />
+      <p
+        class="error"
+        *ngIf="
+          formulario.controls.date.errors?.required &&
+          formulario.controls.date.touched
+        "
+      >
+        La fecha es obligatoria
+      </p>
+    </div>
+    <div>
+      <label>Categoría</label>
+      <select class="form-control" name="cathegory" formControlName="cathegory">
+        <option value="">Selecciona una categoría</option>
+        <option value="xxx">XXX</option>
+        <option value="yyy">YYY</option>
+        <option value="zzz">ZZZ</option>
+      </select>
+      <p
+        class="error"
+        *ngIf="
+          formulario.controls.cathegory.errors?.required &&
+          formulario.controls.cathegory.touched
+        "
+      >
+        Debes elegir una categoría
+      </p>
+    </div>
+    <input
+      [disabled]="!formulario.valid"
+      type="submit"
+      class="btn btn-info mt-4"
+      value="Enviar"
+    />
+  </form>
+</div>

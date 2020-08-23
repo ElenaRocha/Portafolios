@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador/calculador de DNI</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body class="mainContainer">
+
+    <header class="mainHeader">
+        <h1 class="mainTitle">Validador de DNI</h1>
+    </header>
+
+    <main class="mainContent">
+        <section class="formularioOk">
+            <form action="#" method="POST" class="cajita">
+                <input type="text" class="blanco" id="dniCompleto" placeholder="escriba su DNI compelto aquí"/>
+            </form>
+            <button class="btn" onclick="validation()">Validar</button>
+        </section>
+        <section class="valido">
+            <img class="icono" src="recursos/accept.png">
+            <p class="veredicto">Tu DNI es válido</p>
+        </section>
+        <section class="noValido">
+            <img class="icono" src="recursos/cancel.png">
+            <p class="veredicto">Tu DNI no es válido</p>
+        </section>
+        <section class="formularioLetra">
+            <form action="#" method="POST" class="cajas">
+                <input type="text" class="blanco" id="dniSinLetra" placeholder="escriba los números de du DNI aquí"/>
+                <table id="letra">
+                    <tr>
+                        <td>letra</td>
+                    </tr>
+                </table>
+            </form>
+            <button class="btn" onclick="calculando()">Calcular</button>
+        </section>
+    </main>
+
+    <footer class="mainFooter">
+        <p class="copyright">&copy Elena 2020</p>
+    </footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>

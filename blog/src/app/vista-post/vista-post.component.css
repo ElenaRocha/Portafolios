@@ -1,0 +1,8 @@
+@font-face {
+  font-family: blokk;
+  src: url
+    ("./assets/BLOKKNeue-Regular/BLOKKNeue-Regular/BLOKKNeue-Regular.ttf");
+}
+* {
+  font-family: blokk, Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asegurador de contraseñas</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body class="main-container">
+    <header class="main-header">
+        <img class="logo" src="recursos/candado.png">
+        <h1 class="main-title">Asegurador de constraseñas</h1>
+        <p class="sub-title">Introduzca su contraseña para determinar su nivel de seguridad</p>
+    </header>
+    <main class="main-content">
+        <textarea class="password" placeholder="Escriba aquí su constraseña" onkeyup=nivelar()></textarea>
+        <table class="medidor">
+            <tr class="nivel">
+                <td class="celda" id="bajo">BAJO</td>
+                <td class="celda" id="medio">MEDIO</td>
+                <td class="celda" id="alto">ALTO</td>
+            </tr>
+        </table>
+    </main>
+    <footer class="main-footer">
+        <p class="copyright">&copy Elena 2020</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
