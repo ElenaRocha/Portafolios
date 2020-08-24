@@ -14,7 +14,7 @@ taskList.style.display = "block";
 taskList.innerHTML = "";
 taskList.textContent = "";
 
-let ul = document.createElement("ul");
+const ul = document.createElement("ul");
 ul.setAttribute("class", "tasks");
 taskList.appendChild(ul);
 
@@ -49,10 +49,6 @@ function addToDo(): void {
     taskList.style.display = "block";
     taskList.innerHTML = "";
     taskList.textContent = "";
-
-    let ul = document.createElement("ul");
-    ul.setAttribute("class", "tasks");
-    taskList.appendChild(ul);
 
     toDoList.forEach((item) => {
       const li = document.createElement("li");
