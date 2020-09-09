@@ -53,7 +53,7 @@ const taskController = {
       task.description = taskInfo.description;
 
       task.save((err, savedInfo) => {
-        if (err) throw new Error("Ha habido un erro al añadir una tarea", err);
+        if (err) throw new Error("Ha habido un error al añadir una tarea", err);
 
         res.status(200).json({
           message: "Se ha añadido la tarea",
