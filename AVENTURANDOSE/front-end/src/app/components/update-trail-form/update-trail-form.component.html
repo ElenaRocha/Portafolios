@@ -199,6 +199,7 @@
       class="btn btn-warning m-4"
       value="Enviar"
     />
+    <input (click)="deleteTrail()" class="btn btn-warning m-4" value="Eliminar ruta"/>
   </form>
 </div>
 <div class="container margin-bottom80">
@@ -219,14 +220,5 @@
         {{ cathegory.value.name }}
       </option>
     </select>
-    <input
-      class="form-control mr-sm-2"
-      type="search"
-      placeholder="Buscar"
-      aria-label="Search"
-    />
-    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">
-      <img src="../assets/img/busqueda.png" alt="magnifyer" />
-    </button>
   </form>
 </div>

@@ -200,6 +200,7 @@ const trailController = {
   },
 
   addCathegory: async function (req, res) {
+    //limitar cantidad de categorías y que no se repitan
     const role = req.headers["x-role"];
     if (role !== "admin") {
       res.status(200).json({
@@ -238,6 +239,7 @@ const trailController = {
   },
 
   addTag: async function (req, res) {
+    //limitar cantidad de eyiquetas y que no se repitan
     const trailId = req.body.trail;
     const tagId = req.body.tag;
 

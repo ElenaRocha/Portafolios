@@ -22,9 +22,9 @@ function authenticate(req, res, next) {
 router.get("/el-tiempo/:lat/:lon", usersController.getWeather);
 
 router.post("/darse-de-alta", usersController.createUser);
-router.get("ver-perfil/:id", authenticate, usersController.getUserById);
-router.put("/ver-perfil/:id", authenticate, usersController.updateUser);
-router.delete("/ver-perfil/:id", authenticate, usersController.unsuscribe);
+router.get("/ver-perfil/:id", authenticate, usersController.getUserById);
+router.put("/modificar-perfil/:id", authenticate, usersController.updateUser);
+router.delete("/eliminar-perfil/:id", authenticate, usersController.unsuscribe);
 router.post("/entrar", usersController.userLogin);
 
 module.exports = router;

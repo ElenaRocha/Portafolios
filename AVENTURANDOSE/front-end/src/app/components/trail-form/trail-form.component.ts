@@ -27,6 +27,8 @@ export class TrailFormComponent implements OnInit {
     });
   }
 
+  //almacenar imagen de la ruta
+
   ngOnInit() {
     this.trailsService
       .getAllCathegories()

@@ -31,11 +31,19 @@ export class UsersService {
   getUserById(pId): Promise<any> {
     const specificUrl = this.baseUrl + '/ver-perfil/' + pId;
 
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json; charset=UTF-8',
+        'x-access-token': localStorage.getItem('token'),
+        'x-role': localStorage.getItem('role'),
+      }),
+    };
+
     return this.httpClient.get<any>(specificUrl).toPromise();
   }
 
   updateUser(pId, pUser): Promise<any> {
-    const specificUrl = this.baseUrl + 'ver-perfil/' + pId;
+    const specificUrl = this.baseUrl + '/modificar-perfil/' + pId;
 
     const httpOptions = {
       headers: new HttpHeaders({
@@ -49,7 +57,7 @@ export class UsersService {
   }
 
   unsuscribe(pId): Promise<any> {
-    const specificUrl = this.baseUrl + '/ver-perfil/' + pId;
+    const specificUrl = this.baseUrl + '/eliminar-perfil/' + pId;
 
     const httpOptions = {
       headers: new HttpHeaders({

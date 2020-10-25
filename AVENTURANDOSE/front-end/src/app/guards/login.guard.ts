@@ -16,6 +16,7 @@ export class LoginGuard implements CanActivate {
   canActivate() {
     const token = localStorage.getItem('token');
 
+    //jwt
     if (!token) {
       //alert
       return false;

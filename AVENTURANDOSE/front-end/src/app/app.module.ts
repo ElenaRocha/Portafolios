@@ -20,6 +20,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { HeaderComponent } from './components/header/header.component';
 import { FilteredTrailTagsComponent } from './components/filtered-trail-tags/filtered-trail-tags.component';
+//componente para ponerse en contacto, con nodemailer
 
 @NgModule({
   declarations: [

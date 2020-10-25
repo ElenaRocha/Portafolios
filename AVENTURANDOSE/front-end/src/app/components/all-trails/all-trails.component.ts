@@ -14,6 +14,7 @@ export class AllTrailsComponent implements OnInit {
   ngOnInit() {
     this.trailsService
       .getAllCathegories()
+      //limitar cantidad de cards
       .then((result) => {
         this.arrCathegories = result;
       })
